@@ -1,0 +1,13 @@
+{
+	"orderId": "001",
+	"customerId": "testcust01",
+	"items": [
+
+		{
+			"itemId": "001",
+			"price": 10.00,
+			"quantity": "2"
+		}
+	],
+	"orderTotal": 20.00
+}
