@@ -1,0 +1,16 @@
+variables: 
+  - name: rgName
+    value: rg-integration-demo
+
+
+  - name: logicAppName
+    value: logic-np-$(environmentName)-$(location)-01
+  - name: logicAppStorageName
+    value: stgnp$(environmentName)$(storageUniqueId)
+  - name: appInsightsName
+    value: appi-np-$(environmentName)-$(location)-01
+  - name: serviceBusName
+    value: sbus-np-$(environmentName)-$(location)-01
+
+  - name: sgName
+    value: stgnp$(environmentName)$(shortLocation)01

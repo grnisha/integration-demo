@@ -1,0 +1,10 @@
+{
+    "office365-auth": {
+      "type": "Object",
+      "value": {
+        "scheme": "Key",
+        "parameter": "@appsetting('office365-connectionKey')",
+        "type": "Raw"
+      }
+    }
+  }

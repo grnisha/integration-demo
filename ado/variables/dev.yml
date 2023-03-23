@@ -1,0 +1,11 @@
+variables:
+  - name: environmentName
+    value: dev 
+  - name: location
+    value: uk south
+  - name: shortLocation
+    value: uks
+  - name: storageUniqueId
+    value: 4olw3zfflre3s    
+  - name: sgType
+    value: Standard_LRS

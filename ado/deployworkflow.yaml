@@ -1,0 +1,50 @@
+name: DeployWorkflows-$(Date:yyyyMMdd).$(Rev:r)
+
+trigger:
+  batch: true
+  branches:
+    include:
+    - master
+
+  paths:
+    include:
+      - logic
+
+variables:
+  - name: vmImage
+    value: "windows-latest"
+
+stages:
+  - stage: Build
+    jobs:
+      - job: "Build"
+        pool:
+          vmImage: ${{variables.vmImage}}
+        steps:
+          - template: "templates/build.yml"
+            parameters:
+              projectFiles: "logic/**"
+
+  - stage: DEV
+    dependsOn: ["Build"]
+    jobs:
+      - deployment: DEV
+        variables:
+          - template: "variables/common.yml"
+          - template: "variables/dev.yml"
+        pool:
+          vmImage: ${{variables.vmImage}}
+        environment: DEV
+        strategy:
+          runOnce:
+            deploy:
+              steps:
+                  - task: AzureFunctionApp@1
+                    displayName: 'Deploy logic app workflows'
+                    inputs:
+                        azureSubscription: 'scazuredev'
+                        appType: 'functionApp'
+                        appName: '$(logicAppName)'
+                        package: '$(Pipeline.Workspace)/drop/$(Build.BuildId).zip'
+                        deploymentMethod: 'zipDeploy'
+

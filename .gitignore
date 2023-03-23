@@ -1,0 +1,12 @@
+src/test/tests.rest
+src/functions/__azurite_db_blob__.json
+src/functions/__azurite_db_blob_extent__.json
+src/functions/__azurite_db_queue__.json
+src/functions/__azurite_db_queue_extent__.json
+src/functions/__azurite_db_table__.json
+src/functions/__blobstorage__/*
+src/functions/__queuestorage__/*
+logic/__*.json
+logic/__queuestorage__/*
+logic/__blobstorage__/*
+logic/.vscode/*
