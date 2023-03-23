@@ -5,6 +5,6 @@ This repo contains azure integration services demo. The infrastuctre for this de
 
 ## Overview
 
-This demo implements the following services:
+This demo implements the following scenario:
 
-![image](https://user-images.githubusercontent.com/11030157/227256736-09fa7722-54a3-4420-9dc3-56660d80b7fc.png)
+![image](https://user-images.githubusercontent.com/11030157/227258717-c88a6d19-db5a-4562-9c43-9b82f302dbbd.png)
