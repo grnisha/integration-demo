@@ -1,20 +1,10 @@
 # Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+This repo contains azure integration services demo. The infrastuctre for this demo is deployed via https://github.com/Azure/Integration-Services-Landing-Zone-Accelerator
 
-# Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+# Implementation
 
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+## Overview
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
+This demo implements the following services:
 
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+![image](https://user-images.githubusercontent.com/11030157/227256736-09fa7722-54a3-4420-9dc3-56660d80b7fc.png)
