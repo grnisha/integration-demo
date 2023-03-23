@@ -20,8 +20,8 @@ resource logicAppStorageAccount 'Microsoft.Storage/storageAccounts@2021-02-01' e
 
 
 
-resource serviceBus 'Microsoft.ServiceBus/namespaces@2022-10-01-preview' existing = {  
-  name: serviceBusName
+resource serviceBus 'Microsoft.ServiceBus/namespaces/AuthorizationRules@2022-10-01-preview' existing = {  
+  name: '${serviceBusName}/RootManageSharedAccessKey'
 }
 
 resource functionAppAppsettings 'Microsoft.Web/sites/config@2022-03-01' = {
