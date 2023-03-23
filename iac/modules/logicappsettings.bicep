@@ -19,6 +19,11 @@ resource logicAppStorageAccount 'Microsoft.Storage/storageAccounts@2021-02-01' e
 }
 
 
+
+resource serviceBus 'Microsoft.ServiceBus/namespaces@2022-10-01-preview' existing = {  
+  name: serviceBusName
+}
+
 resource functionAppAppsettings 'Microsoft.Web/sites/config@2022-03-01' = {
   parent: siteLogicApp
   name: 'appsettings'
@@ -38,7 +43,7 @@ resource functionAppAppsettings 'Microsoft.Web/sites/config@2022-03-01' = {
     WORKFLOWS_SUBSCRIPTION_ID: subscription().subscriptionId
     WORKFLOWS_LOCATION_NAME: location
     WEBSITE_RUN_FROM_PACKAGE: '1'
-    serviceBus_connectionString: 'Endpoint=sb://${serviceBusName}.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;serviceBus.listKeys().primaryKey'
+    serviceBus_connectionString: 'Endpoint=sb://${serviceBusName}.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=${serviceBus.listKeys().primaryKey}'
     AzureBlob_connectionString: storageAccountConnectionString
     office365_connectionRuntimeUrl: office365ConRuntimeUrl
   }
