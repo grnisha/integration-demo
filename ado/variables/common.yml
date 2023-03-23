@@ -4,13 +4,13 @@ variables:
 
 
   - name: logicAppName
-    value: logic-np-$(environmentName)-$(location)-01
+    value: logic-np-$(environmentName)-$(locationName)-01
   - name: logicAppStorageName
     value: stgnp$(environmentName)$(storageUniqueId)
   - name: appInsightsName
-    value: appi-np-$(environmentName)-$(location)-01
+    value: appi-np-$(environmentName)-$(locationName)-01
   - name: serviceBusName
-    value: sbus-np-$(environmentName)-$(location)-01
+    value: sbus-np-$(environmentName)-$(locationName)-01
 
   - name: sgName
     value: stgnp$(environmentName)$(shortLocation)01

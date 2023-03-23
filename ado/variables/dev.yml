@@ -3,6 +3,8 @@ variables:
     value: dev 
   - name: location
     value: uk south
+  - name: locationName
+    value: uksouth
   - name: shortLocation
     value: uks
   - name: storageUniqueId
