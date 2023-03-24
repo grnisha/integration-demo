@@ -38,6 +38,13 @@ module apiConnection 'modules/apiconnections.bicep' = {
   }
 }
 
+module serviceBusTopic 'modules/servicebus.bicep' = {
+  name: 'servicebus-${buildNumber}'
+  params:{
+    serviceBusName:serviceBusName
+    location:location
+  }
+}
 // Logic app settings
 module logicAppSettingsModule 'modules/logicappsettings.bicep' = {
   name: 'functionAppSettings-${buildNumber}'

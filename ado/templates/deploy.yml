@@ -1,7 +1,3 @@
-parameters:
-  - name: buildNumber
-    type: string
-
 steps:
 
   - task: AzureCLI@2    

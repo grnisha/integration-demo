@@ -1,4 +1,4 @@
-name: DeployAll-$(Date:yyyyMMdd).$(Rev:r)
+name: DeployAPI-$(Date:yyyyMMdd).$(Rev:r)
 
 trigger:
   batch: true
@@ -8,8 +8,6 @@ trigger:
 
   paths:
     include:
-      - iac/*
-    exclude:
       - iac/api/*
 
 
@@ -40,5 +38,4 @@ stages:
           runOnce:
             deploy:
               steps:
-                - template: "templates/deploy.yml"
                 - template: "templates/apideploy.yml"

@@ -10,3 +10,7 @@ logic/__*.json
 logic/__queuestorage__/*
 logic/__blobstorage__/*
 logic/.vscode/*
+/.vs/integration-demo/FileContentIndex
+/.vs/slnx.sqlite
+/.vs/VSWorkspaceState.json
+/.vs/integration-demo/v17/.wsuo

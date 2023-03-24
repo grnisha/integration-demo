@@ -11,6 +11,8 @@ variables:
     value: appi-np-$(environmentName)-$(locationName)-01
   - name: serviceBusName
     value: sbus-np-$(environmentName)-$(locationName)-01
+  - name: apiManagementServiceName
+    value: apim-np-$(environmentName)-$(locationName)-01
 
   - name: sgName
     value: stgnp$(environmentName)$(shortLocation)01

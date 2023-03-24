@@ -1,0 +1,15 @@
+steps:   
+
+  - task: AzureCLI@2    
+    displayName: "Provision Order API"
+    inputs:
+      azureSubscription: "scazuredev"
+      scriptType: "pscore"
+      scriptLocation: "inlineScript"
+      inlineScript: |    
+        az deployment group create `
+        --name api-$(Build.BuildNumber) `
+        --resource-group "$(rgName)"  `
+        --template-file "$(Pipeline.Workspace)/deploy/api/processorder/api.bicep" `
+        --parameters "apiManagementServiceName=$(apiManagementServiceName)" `
+        "logicAppName=$(logicAppName)"  

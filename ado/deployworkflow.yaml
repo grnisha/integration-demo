@@ -22,8 +22,6 @@ stages:
           vmImage: ${{variables.vmImage}}
         steps:
           - template: "templates/build.yml"
-            parameters:
-              projectFiles: "logic/**"
 
   - stage: DEV
     dependsOn: ["Build"]
